@@ -178,13 +178,26 @@ footer{background:var(--ink);color:color-mix(in srgb, var(--paper) 52%, transpar
     <div class="sec-head"><h2>Work</h2></div>
     <p class="sec-intro">Films and podcast series for research funders, universities, consortia and charities. Some of it is polished. Some of it involves a red briefcase, a borrowed room and a scientist who has never been on camera before.</p>
 
-    <div class="vid wide" data-v="1230207202" data-h="291f0c9c56">
-      <button type="button">
-        <span class="ttl">European Citizen Science Association &mdash; conference film, 2026</span>
-        <span class="play"><i></i>Play</span>
-      </button>
+    <div class="vgrid two" style="margin-bottom:10px">
+      <div>
+        <div class="vid wide" data-yt="k89dzD6sb10">
+          <button type="button">
+            <span class="ttl">4M Conference film &mdash; Menstruation Research Network, 2026</span>
+            <span class="play"><i></i>Play</span>
+          </button>
+        </div>
+        <p class="vid-cap">Two days of research on menarche, menstruation and menopause, told through the people who came rather than the sessions they sat in. &middot; <a href="https://www.youtube.com/watch?v=k89dzD6sb10" target="_blank" rel="noopener">Watch on YouTube</a></p>
+      </div>
+      <div>
+        <div class="vid wide" data-v="1230207202" data-h="291f0c9c56">
+          <button type="button">
+            <span class="ttl">European Citizen Science Association &mdash; conference film, 2026</span>
+            <span class="play"><i></i>Play</span>
+          </button>
+        </div>
+        <p class="vid-cap">Three years of a Europe-wide project with dozens of partners and no obvious storyline. The hardest brief I have taken, and the one I am proudest of. &middot; <a href="https://vimeo.com/1230207202" target="_blank" rel="noopener">Open on Vimeo</a></p>
+      </div>
     </div>
-    <p class="vid-cap">Three years of a Europe-wide project with dozens of partners and no obvious storyline. The hardest brief I have taken, and the one I am proudest of. &middot; <a href="https://vimeo.com/1230207202" target="_blank" rel="noopener">Open on Vimeo</a></p>
 
     <div class="work">
 
@@ -204,7 +217,7 @@ footer{background:var(--ink);color:color-mix(in srgb, var(--paper) 52%, transpar
         <div class="entry-meta"><b>Documentary film</b>2024 &ndash; ongoing<br>Wellcome Leap</div>
         <div>
           <h3>Leap Stories and Research Stories</h3>
-          <p>In 2025 My team and I interviewed 178 researchers in 29 countries. Quantum technology one month, stem cells the next, video game design after that. Not being an expert in the topic is intentional &mdash; the question I need answered is almost always the question the audience needs answered too. I storyline the films on this page and shape each one from the interview design to the final edit.</p>
+          <p>In 2025 my team and I interviewed 178 researchers in 29 countries. Quantum technology one month, stem cells the next, video game design after that. Not being an expert in the topic is intentional &mdash; the question I need answered is almost always the question the audience needs answered too. I storyline the films on this page and shape each one from the interview design to the final edit.</p>
           <ul class="links">
             <li><a href="https://wellcomeleap.org/stories/" target="_blank" rel="noopener">Watch the films</a></li>
             <li><a href="https://wellcomeleap.org/programs/delta-tissue/" target="_blank" rel="noopener">Delta Tissue</a></li>
@@ -216,8 +229,10 @@ footer{background:var(--ink);color:color-mix(in srgb, var(--paper) 52%, transpar
         <div class="entry-meta"><b>Conference film</b>2026<br>Menstruation Research Network</div>
         <div>
           <h3>4M Conference film</h3>
-          <p>Two days of research on menarche, menstruation and menopause, told through the people who came rather than the sessions they sat in. In final production.</p>
-          <ul class="links"><li><span class="tag">Coming soon</span></li></ul>
+          <p>Two days of research on menarche, menstruation and menopause, told through the people who came rather than the sessions they sat in. Filmed, interviewed and edited across the conference, then cut into a single piece the Network can use long after everyone has gone home.</p>
+          <ul class="links">
+            <li><a href="https://www.youtube.com/watch?v=k89dzD6sb10" target="_blank" rel="noopener">Watch the film</a></li>
+          </ul>
         </div>
       </article>
 
@@ -398,8 +413,11 @@ document.querySelectorAll('.vid button').forEach(function(btn){
   btn.addEventListener('click', function(){
     var box = btn.parentElement;
     var id = box.getAttribute('data-v'), h = box.getAttribute('data-h');
+    var yt = box.getAttribute('data-yt');
     var f = document.createElement('iframe');
-    f.src = 'https://player.vimeo.com/video/' + id + '?h=' + h + '&autoplay=1&title=0&byline=0&portrait=0';
+    f.src = yt
+      ? 'https://www.youtube-nocookie.com/embed/' + yt + '?autoplay=1&rel=0'
+      : 'https://player.vimeo.com/video/' + id + '?h=' + h + '&autoplay=1&title=0&byline=0&portrait=0';
     f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
     f.setAttribute('allowfullscreen','');
     f.setAttribute('title', btn.querySelector('.ttl').textContent);
