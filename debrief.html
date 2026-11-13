@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project debrief — Who Gets to Do Science? | Aishwarya Viswamitra</title>
+<meta name="description" content="How a five-day conference in Finland became an eleven-minute episode: production, storyline and client notes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDEEE7; --paper-2:#E3E5DC; --ink:#132C33; --ink-soft:#3F565C;
+  --muted:#65766F; --ochre:#B07816; --teal:#2F7C86; --rule:#C7CBC0; --card:#F6F6F1;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#10232A; --paper-2:#0B1A20; --ink:#E8EAE2; --ink-soft:#B4C1BC;
+    --muted:#93A39D; --ochre:#E0A542; --teal:#6FB9C2; --rule:#2A4650; --card:#162E36;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10232A; --paper-2:#0B1A20; --ink:#E8EAE2; --ink-soft:#B4C1BC;
+  --muted:#93A39D; --ochre:#E0A542; --teal:#6FB9C2; --rule:#2A4650; --card:#162E36;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Newsreader',Georgia,serif;font-size:19px;line-height:1.62;font-weight:300;
+  -webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--ochre);color:var(--paper)}
+:focus-visible{outline:2px solid var(--ochre);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:760px;margin:0 auto;padding:0 28px}
+
+.topbar{border-bottom:1px solid var(--rule);background:var(--paper)}
+.topbar-in{max-width:760px;margin:0 auto;padding:14px 28px}
+.back{font-family:'Karla',system-ui,sans-serif;font-size:14px;font-weight:500;
+  text-decoration:none;color:var(--ink-soft)}
+.back:hover{color:var(--ochre)}
+
+header.hero{padding:64px 0 10px}
+.kicker{font-family:'Karla',system-ui,sans-serif;font-size:13px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin:0 0 14px}
+h1{font-size:clamp(2rem,5.4vw,3.1rem);line-height:1.08;margin:0 0 18px;
+  font-weight:400;letter-spacing:-.02em}
+.standfirst{font-size:clamp(1.1rem,2.3vw,1.3rem);line-height:1.5;color:var(--ink-soft);
+  margin:0 0 30px;font-weight:300}
+.meta{font-family:'Karla',system-ui,sans-serif;font-size:13.5px;color:var(--muted);
+  line-height:1.8;margin:0 0 10px;padding-top:18px;border-top:1px solid var(--rule)}
+.meta b{color:var(--ink);font-weight:600}
+
+.listen{background:var(--card);border:1px solid var(--rule);border-radius:4px;
+  padding:26px 28px;margin:34px 0 10px}
+.listen h2{font-size:1.3rem;font-weight:500;margin:0 0 8px;line-height:1.3}
+.listen p{margin:0 0 18px;color:var(--ink-soft);font-size:1rem}
+.btn{display:inline-block;font-family:'Karla',system-ui,sans-serif;font-size:14.5px;
+  font-weight:600;text-decoration:none;background:var(--ink);color:var(--paper);
+  border-radius:999px;padding:11px 24px}
+.btn:hover{background:var(--ochre);color:#12232A}
+.runtime{font-family:'Karla',system-ui,sans-serif;font-size:13px;color:var(--muted);
+  margin-left:14px}
+.listen .more{font-family:'Karla',system-ui,sans-serif;font-size:13.5px;line-height:1.65;
+  color:var(--muted);margin:18px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.listen .more a{color:var(--teal)}
+
+section{padding:40px 0 0}
+h2.sec{font-size:clamp(1.4rem,3vw,1.85rem);font-weight:400;letter-spacing:-.012em;
+  margin:0 0 6px;line-height:1.2}
+.sec-sub{font-family:'Karla',system-ui,sans-serif;font-size:13px;color:var(--muted);
+  margin:0 0 22px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+p{margin:0 0 18px}
+.lead{font-size:1.06rem}
+ul.plain{list-style:none;margin:0 0 18px;padding:0}
+ul.plain li{padding:14px 0;border-bottom:1px solid var(--rule)}
+ul.plain li:last-child{border-bottom:0}
+ul.plain h3{font-size:1.08rem;font-weight:500;margin:0 0 6px;line-height:1.3}
+ul.plain p{margin:0;color:var(--ink-soft);font-size:1rem}
+
+blockquote{margin:28px 0;padding:0 0 0 22px;border-left:2px solid var(--ochre)}
+blockquote p{font-size:clamp(1.15rem,2.5vw,1.4rem);line-height:1.42;font-style:italic;
+  color:var(--ochre);margin:0 0 10px}
+blockquote cite{font-family:'Karla',system-ui,sans-serif;font-size:13px;color:var(--muted);
+  font-style:normal}
+
+.vid{margin:0 0 12px;background:var(--ink);border-radius:4px;overflow:hidden;
+  position:relative;aspect-ratio:4/3}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid button{position:absolute;inset:0;width:100%;height:100%;border:0;cursor:pointer;
+  background:linear-gradient(150deg,#18414B,#0E262D 62%,#2C1F0A);
+  color:#EDEEE7;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;
+  gap:8px;padding:22px;text-align:left;font-family:'Karla',system-ui,sans-serif}
+.vid button:hover{background:linear-gradient(150deg,#1E4E59,#123038 62%,#3A2A0D)}
+.vid .ttl{font-family:'Newsreader',Georgia,serif;font-size:clamp(1.05rem,2.4vw,1.3rem);
+  font-weight:400;line-height:1.25;max-width:22ch}
+.vid .play{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600}
+.vid .play i{width:26px;height:26px;border-radius:50%;background:var(--ochre);
+  display:inline-block;position:relative;flex:none}
+.vid .play i::after{content:"";position:absolute;left:10px;top:7.5px;
+  border-left:8px solid #12232A;border-top:5.5px solid transparent;border-bottom:5.5px solid transparent}
+.cap{font-family:'Karla',system-ui,sans-serif;font-size:12.5px;color:var(--muted);
+  line-height:1.6;margin:0 0 10px}
+.cap a{color:var(--teal)}
+
+
+.transcript{margin-top:10px;border-top:1px solid var(--rule)}
+.transcript summary{list-style:none;cursor:pointer;padding:20px 0 0;
+  font-family:'Karla',system-ui,sans-serif;font-size:14.5px;font-weight:600;color:var(--teal)}
+.transcript summary::-webkit-details-marker{display:none}
+.transcript summary::after{content:" \25BE";}
+.transcript[open] summary::after{content:" \25B4";}
+.transcript summary:hover{color:var(--ochre)}
+.tbody{padding-top:18px}
+.tact{font-family:'Karla',system-ui,sans-serif;font-size:12.5px;font-weight:600;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--muted);
+  margin:34px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.tact:first-child{margin-top:0}
+.tline{margin:0 0 16px;font-size:1rem;line-height:1.6}
+.tspk{font-family:'Karla',system-ui,sans-serif;font-size:11.5px;font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:3px}
+.tnar .tspk{color:var(--ochre)}
+.tclip .tspk{color:var(--teal)}
+.tclip{padding-left:18px;border-left:2px solid var(--rule);font-style:italic;color:var(--ink-soft)}
+.tend{font-family:'Karla',system-ui,sans-serif;font-size:12.5px;color:var(--muted);margin-top:28px}
+footer{margin-top:60px;border-top:1px solid var(--rule);padding:26px 0 54px;
+  font-family:'Karla',system-ui,sans-serif;font-size:13px;color:var(--muted)}
+footer a{color:var(--teal)}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-in">
+  <a class="back" href="./">&larr; Aishwarya Viswamitra</a>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Project debrief</p>
+    <h1>Who Gets to Do Science?</h1>
+    <p class="standfirst">Five days, 650 people, one person with a microphone, and a brief that asked for something controversial enough to be interesting and safe enough not to alarm the funder.</p>
+    <p class="meta">
+      <b>Client</b> European Citizen Science Association (ECSA)<br>
+      <b>Project</b> European Citizen Science, final conference, Oulu, Finland<br>
+      <b>Role</b> Host, producer, interviewer, writer, editor<br>
+      <b>Output</b> Five-episode series. This is episode one.
+    </p>
+
+    <div class="listen">
+      <h2>Listen to the episode</h2>
+      <p>Eleven minutes. Episode one of five, recorded across the ECSA 2026 conference.</p>
+      <a class="btn" href="https://soundcloud.com/european-citizen-science/ecs-podcast-who-gets-to-do" target="_blank" rel="noopener">Play the episode</a>
+      <span class="runtime">11 min</span>
+      <p class="more">The other four episodes are on the <a href="https://citizenscience.eu/ecsa/ecs-podcast-hubs/" target="_blank" rel="noopener">ECS podcast hub</a> &mdash; on participation, evidence, public libraries, and where grassroots projects begin.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">Why this one</h2>
+    <p class="sec-sub">Of everything I have made, this was the hardest</p>
+    <p class="lead">I could have sent something easier. I chose this because it was a commissioned series for a client whose own project I was being paid to celebrate &mdash; and I opened it with a member of their staff saying that citizen science is not, in fact, inclusive.</p>
+    <p>The brief was, more or less: give us a hot take. Something controversial, but not so controversial that our funder minds. In the current political climate that is a genuinely difficult ask, and I think the answer was to pick a question that is uncomfortable because it is real rather than because it is provocative.</p>
+    <p>So: who gets to do science? It is a question that haunts my own doctoral research. When we research marginalised groups &mdash; which is important work &mdash; we end up asking the most from the people with the least to spare. Citizen science asks fishermen to survey dolphins. But when a fisherman is fighting those dolphins for the day&rsquo;s catch, how do you build that bridge? Does it always work? Is hope enough?</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">Production</h2>
+    <p class="sec-sub">One person, fixed hours, no interviews arranged in advance</p>
+    <ul class="plain">
+      <li>
+        <h3>Nothing was pre-booked</h3>
+        <p>I flew to Finland for a five-day conference of 650 people, all of them focused on getting to the next session. There were no calls set up. I had to read the schedule and make judgement calls about who was worth approaching, before I knew anything about them.</p>
+      </li>
+      <li>
+        <h3>I was paid for a set number of hours</h3>
+        <p>Which meant I could not capture everything and sift it later. Every hour spent recording was an hour not spent editing. A one-person crew has to decide what matters while it is still happening.</p>
+      </li>
+      <li>
+        <h3>The booth did not work, so I abandoned it</h3>
+        <p>I was given a booth. Nobody came. I moved it closer to the registration desk and people started peering in. I made a sign, and a few people asked what I was doing. Then I picked up the camera and microphone and went to them instead &mdash; and that is when it finally worked.</p>
+      </li>
+      <li>
+        <h3>My research background was the way in</h3>
+        <p>I work in participatory research for my PhD, so I had the vocabulary. That let me build a broad list of questions and then tailor them live, to people I had never met and had not planned to interview.</p>
+      </li>
+      <li>
+        <h3>What I want to get better at</h3>
+        <p>Day five was a public event in a shopping mall. The sound was loud, chaotic and constantly changing. I got usable audio, but recording well in environments like that is a craft I would like to learn properly.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">Storyline</h2>
+    <p class="sec-sub">How eleven minutes got its shape</p>
+    <p>The structure came out of the question rather than the schedule. Act one situates us in the Victorian period, when science belonged to the wealthy few &mdash; the first voice you hear says it with the tired recognition of someone not entirely sure that has changed. Act two is what actually works: a scent-mapping project that abandoned its own app, a biodiversity project that became an accessibility project, and the fisherman who ended up knowing all the dolphins by name.</p>
+    <p>Act three is where I set a trap for myself. I say I expected the conference to run on hope &mdash; so that a guest can puncture it. He says he is probably motivated by guilt. That is the turn, and it only works because of where it sits.</p>
+    <p>The episode ends with my favourite recording, which I got entirely by chance. In exchange for filling out her survey, a school student &mdash; with her teacher&rsquo;s permission &mdash; agreed to answer three questions. The next generation closes an episode that opened in the nineteenth century.</p>
+    <p>The music had to carry that shape, and I was working from a limited library because I was the only person on the team. With more resources I would do far more with sound. When I talk about the fisherman, imagine water hitting the side of a boat underneath it. It is one of the things I admire most in the podcasts I listen to &mdash; the layering.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">Behind the scenes</h2>
+    <p class="sec-sub">Snow, a suitcase, and a child falling over mid-take</p>
+    <div class="vid" data-v="1246608193" data-h="605beec5c6">
+      <button type="button">
+        <span class="ttl">Making the series &mdash; Oulu, Finland</span>
+        <span class="play"><i></i>Play</span>
+      </button>
+    </div>
+    <p class="cap">It was extremely cold, and lugging equipment through snow is not a glamorous part of the job. &middot; <a href="https://vimeo.com/1246608193" target="_blank" rel="noopener">Open on Vimeo</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">What happened next</h2>
+    <p class="sec-sub">Client response</p>
+    <blockquote>
+      <p>Wow, goosebumps. It&rsquo;s really good and I can&rsquo;t wait to hear it.</p>
+      <cite>Carolina Doran, ECSA</cite>
+    </blockquote>
+    <p>The series was made for the European Citizen Science project, run by ECSA across four years and dozens of partner organisations. ECSA came back to me recently to say the episodes had won internal buy-in from senior people who had not previously understood what the project was trying to achieve &mdash; and asked to list me on their internal site so other teams can work with me.</p>
+    <p>I am proud of the balance this series strikes. It is honest about neglect and exclusion without becoming a doom piece, and it makes the case for more citizen science rather than less. With better archives and a bigger team there is far more that could be done with this material. As a one-person production, it is the work I would want to be judged on.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">Transcript</h2>
+    <p class="sec-sub">Music cues removed; everything else as recorded</p>
+    <details class="transcript">
+      <summary>Read the full transcript</summary>
+      <div class="tbody">
+<p class="tact">Intro bumper</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Six hundred and fifty scientists walked into a conference in Finland.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Some of them had PhDs. Some of them were twelve years old. Some of them were fishermen who used to hate dolphins.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>This is Who Gets to Do Science? &mdash; a podcast from the European Citizen Science project at the ECSA 2026 conference, exploring what citizen science actually means when we stop being polite about it.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>I&rsquo;m Aishwarya. Let&rsquo;s get into it.</p>
+<p class="tact">Cold open</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>A quick question before we start. Think about the last time you contributed to science not professionally. Just as a person. A citizen.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Now ask yourself: did science feel like something that was open to you?</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Joseph</span>&ldquo;In Victorian times, it was really only the people who had wealth and privilege who could take part in science. I guess that&rsquo;s always been the way.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>That&rsquo;s Joseph Roach, from Trinity College Dublin. And he said that with the kind of tired recognition that suggests he wasn&rsquo;t entirely sure things had changed.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>That&rsquo;s the kind of conversation I want to have today.</p>
+<p class="tact">Act one: &ldquo;Who is citizen science actually for?&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>I&rsquo;m at the ECSA conference in Oulu, Finland &mdash; the European Citizen Science Association&rsquo;s sixth conference, with over 650 people in the room. The energy is genuinely infectious. People are passionate, creative, collaborative.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>But I kept asking a question that made people pause.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Is citizen science actually inclusive? Or does it just feel like it is?</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Leo</span>&ldquo;I would say as it is right now, not. I would love for it to be that way, but I think it&rsquo;s still a very selective group of people that actually can do citizen science. So the ones that have the time and the resources and don&rsquo;t have to, let&rsquo;s say, worry about something else.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>That&rsquo;s Leo Mensel from ECSA. And I appreciated that they didn&rsquo;t soften it.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>The default participant in citizen science &mdash; the person who shows up, who has time, who has a smartphone and WiFi and a free Saturday &mdash; is already a particular kind of person. When you only reach that person, you&rsquo;re not doing inclusion. You&rsquo;re doing outreach to the already-included.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>But here&rsquo;s where it gets more complicated. Because Leo also pointed out that exclusion doesn&rsquo;t only mean being left out due to lack of resources. On one end, there are people who can&rsquo;t participate because they don&rsquo;t have access. On the other end, there are communities who have to participate &mdash; because no one else is going to document what&rsquo;s happening to them.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>That&rsquo;s a very different relationship with science.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>And then there&rsquo;s a third group &mdash; one I hadn&rsquo;t thought about.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Carolina</span>&ldquo;And I will say something maybe slightly controversial is that when we use terms like hard to reach, which we use a lot in this work, it doesn&rsquo;t always overlap with vulnerable. So they are no way or means vulnerable, but have a lot of power to bring to citizen science. They have a lot of opportunity, they have funding, they have knowledge, they have opportunity space. And so we worked very hard to engage them.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>That&rsquo;s Carolina, who coordinates the ECS project at ECSA. Hard-to-reach is a spectrum. And sometimes the people hardest to move are the ones with the most power.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Which raises a question: when we talk about inclusion in citizen science, are we also talking about power? Who gets to ask the questions? Who holds the data? Who decides what counts as evidence?</p>
+<p class="tact">Act two: &ldquo;What actually works&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>I don&rsquo;t want this to be a doom episode. Because alongside these honest tensions, I heard some genuinely remarkable stories about what happens when citizen science is designed around a community&rsquo;s actual needs &mdash; rather than a researcher&rsquo;s agenda.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Mireia</span>&ldquo;In this pilot, we participated also science for change and we worked with older adults. And what we had to do with them was to map odours with an app that is called Other Collect and they had to use it to map odours and see if they were bad or good and so on. And what happened is that they were not really interested in technology or in using the app. So we changed things around. We kept flexible, which is one of the main indications for to be inclusive. And we ended up doing activities that didn&rsquo;t involve technology. They involved odour mapping and also getting back to their memories from when they were younger to their stories to odours. So we find ways in which odours would be meaningful for them and not only for us. So I think that that&rsquo;s a really beautiful story. And then they ended up doing an arts exhibition with it. And it was really cool.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Mireia, from Science for Change, was describing a pilot project in Spain in 2024. The original plan was data collection through an app. That didn&rsquo;t work. So they listened &mdash; and what came out was something closer to memory work. An art exhibition made from scent and story.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>That&rsquo;s not a failure of citizen science. That&rsquo;s citizen science doing exactly what it&rsquo;s supposed to do.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Stefanie</span>&ldquo;The approach was not trying to make biodiversity monitoring accessible to a new community, which is a fine goal. But it didn&rsquo;t work out so much because the community has different needs and they refocused their project on the needs of the community.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Stefanie Schuerz from Centre for Social Innovation Vienna was describing a project with the deaf and hard-of-hearing community in Greece &mdash; one that pivoted away from biodiversity monitoring to focus on what that community actually needed: making the city more accessible, and getting those needs in front of policymakers.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>The lesson both Mireia and Stefanie are pointing to is the same. Start with what the community wants to solve. Not what you want to measure.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>And sometimes what gets solved surprises everyone &mdash; including the researcher.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Carolina</span>&ldquo;this one fisherman who was so angry with the mammals that were eating his fish. And after the end of the work we did together, or not me, but the responsible partner, he knew all the names of the dolphins. He got super engaged in preserving them because he understood the role they play in the entire ecosystem and how actually it&rsquo;s beneficial for him in the end to maintain those dolphins.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Citizen science didn&rsquo;t give him data. It gave him a relationship.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Carolina coordinates this work across dozens of partner organisations &mdash; fishing communities, farming communities, remote communities in Greenland, communities for people who are hard of hearing. And she told me the thing she&rsquo;s proudest of isn&rsquo;t the platform or the policy outputs even though those are incredible. It&rsquo;s the moments when someone&rsquo;s entire relationship to the natural world shifts.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Those moments, she said, are the legacy.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Muki</span>&ldquo;Empowerment actually requires a transfer of power.(&hellip;) So in the case of the person that had issue, for example,(&hellip;) that was that instead of we, the scientists, telling the story, and then we ended up in front of the community and presenting the issue, it was no, the power to present things is over to you, the participants, because you&rsquo;ve done the work, you should tell your community, and you know enough about the science to tell them.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>A transfer of power. Not a transfer of information &mdash; of power. That framing matters. Because citizen science can mean many things. It can mean asking people to click images to train a model. Or it can mean handing the microphone to someone who&rsquo;s never felt like science was theirs, and watching what they do with it.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Beatriz</span>&ldquo;So, it has been very impressive to go from a country that didn&rsquo;t have citizen science really established, to now a country that has a network, has a platform. And really, I think it&rsquo;s just the beginning of a great citizen science story.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Beatriz was talking about Romania &mdash; a country that three years ago had almost no citizen science infrastructure, and now has a national network and platform, largely built through the ambassador programme. One motivated person, in one country, making something from nothing.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>That&rsquo;s structural change. And it starts with inclusion &mdash; with deciding that Romania belongs in this story too.</p>
+<p class="tact">Act three: &ldquo;What keeps you doing this&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>I want to end with something that surprised me. Because I expected this conference to run on hope. On the quiet confidence that things are moving in the right direction.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>And some of that is here. But so is something I didn&rsquo;t expect to hear, something really honest.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Joseph</span>&ldquo;Oh God, I wish it was hope. I think I&rsquo;m probably motivated by guilt.&rdquo;</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Joseph</span>&ldquo;I think a big factor for me is thinking how many things had to break in my favor for me to have such a lovely job and career. I got so lucky at so many points in time&hellip; I think I&rsquo;m very aware of that all the time &mdash; how it could have been very different for me if I hadn&rsquo;t been so lucky to have support from people around me who helped me so I think that guilt is probably a big motivator.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Joseph went on to say that if he met someone on the street, he wouldn&rsquo;t lead with citizen science. He&rsquo;d lead with connection. With what they were afraid of. What they needed.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Joseph</span>&ldquo;I&rsquo;d like to try and find ways to connect with someone on the street in terms of what they worry about, what their fears are, what their needs are, because they&rsquo;re probably the same as my own. If you start at that point from a position of connection,(&hellip;) then you can maybe get to, &lsquo;What do they feel about science or research? What do I feel about science or research?&rsquo;&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>And there, I think, is the whole argument. Inclusion isn&rsquo;t a feature you bolt onto a project after the research questions have already been designed. It&rsquo;s the starting condition. It begins before science does.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; Leonardo</span>&ldquo;The potential of citizen science is more than the science, per se&hellip; It&rsquo;s the potential for shaping society, for shaping people&rsquo;s belief, for bringing about real change.&rdquo;</p>
+<p class="tact">Closing</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>I came to this conference for two reasons. One was to meet the people behind the ECS project &mdash; the coordinators, the ambassadors, the researchers who&rsquo;ve spent three years trying to build something that lasts. The other was more personal: my own PhD research on endometriosis relies entirely on the voices of participants. On people who&rsquo;ve been under-studied, under-believed, and over-asked for their stories without always seeing something change in return.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>Both of those reasons brought me to the same question.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>So when I ask whether citizen science is actually inclusive, it&rsquo;s not abstract for me.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>What I heard here suggests the tools are real. The examples are real. The transformation that happens when a community is given the means to document its own experience &mdash; that&rsquo;s real.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>But Leo said it plainly: as of right now, it&rsquo;s still a selective group. And that&rsquo;s not a criticism to file away for the next conference. That&rsquo;s the work.</p>
+<p class="tline tclip"><span class="tspk">Clip &mdash; child from Nottingham</span>&ldquo;It means a lot to me because it just makes me feel a lot calm and quite happy&hellip; I&rsquo;d like to see a lot more nature involved in science. And a lot more children talking about nature.&rdquo;</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>I&rsquo;ll leave you with that.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>A child from Nottingham, at her first ever academic conference, running her own survey on whether people feel like they belong in nature.</p>
+<p class="tline tnar"><span class="tspk">Narration &mdash; Aishwarya</span>She&rsquo;s already doing the work.</p>
+<p class="tend">[END]</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="./">Back to portfolio</a> &nbsp;·&nbsp; Aishwarya Viswamitra
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.vid button').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var box = btn.parentElement;
+    var f = document.createElement('iframe');
+    f.src = 'https://player.vimeo.com/video/' + box.getAttribute('data-v') +
+            '?h=' + box.getAttribute('data-h') + '&autoplay=1&title=0&byline=0&portrait=0';
+    f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
+    f.setAttribute('allowfullscreen','');
+    f.setAttribute('title', btn.querySelector('.ttl').textContent);
+    box.innerHTML = '';
+    box.appendChild(f);
+  });
+});
+</script>
+</body>
+</html>
